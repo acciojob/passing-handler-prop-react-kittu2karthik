@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 
-function Selection({ applyColor, "data-testid": testid }) {
+const Selection = ({ applyColor, "data-testid": testid }) => {
   const [style, setStyle] = useState({ background: "" });
 
-  function handleColor() {
+  const handleClick = () => {
     applyColor(setStyle);
-  }
+  };
 
   return (
-    <div onClick={handleColor} style={style} data-testid={testid}>
+    <div
+      onClick={handleClick}
+      className="fix-box"          
+      style={style}
+      data-testid={testid}         
+    >
       Selection
     </div>
   );
-}
+};
 
 export default Selection;
