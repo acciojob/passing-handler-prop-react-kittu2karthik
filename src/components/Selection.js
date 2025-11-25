@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Selection({ applyColor }) {
+function Selection({ applyColor, "data-testid": testid }) {
   const [style, setStyle] = useState({ background: "" });
 
   function handleColor() {
@@ -8,7 +8,7 @@ function Selection({ applyColor }) {
   }
 
   return (
-    <div onClick={handleColor} style={style}>
+    <div onClick={handleColor} style={style} data-testid={testid}>
       Selection
     </div>
   );

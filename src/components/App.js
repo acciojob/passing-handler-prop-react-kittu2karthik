@@ -48,7 +48,7 @@ const App = () => {
 
       <div className="row" id="children-wrapper">
         {["selection1", "selection2", "selection3"].map((key) => (
-          <Selection key={key} applyColor={applyColor} />
+          <Selection key={key} applyColor={applyColor} data-testid={key} />
         ))}
       </div>
     </div>
